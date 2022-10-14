@@ -7,8 +7,13 @@ const HomePage: NextPage = () => {
       <Head>
         <title>Yutna - Home</title>
       </Head>
-      <main>
-        <h1>Coming soon...</h1>
+      <main className="flex h-screen w-screen flex-col items-center justify-center bg-zinc-900">
+        <h1 className="text-4xl text-white md:text-6xl xl:text-8xl">
+          Coming soon...
+        </h1>
+        <p className="mt-4 text-base text-white md:mt-6 md:text-2xl xl:mt-8 xl:text-4xl">
+          This site is under construction 👷🏼‍♂️
+        </p>
       </main>
     </div>
   );
