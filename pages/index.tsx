@@ -17,7 +17,7 @@ const HomePage: NextPage = () => {
         <p
           className="mt-4 text-center text-base text-white md:mt-6 md:text-2xl xl:mt-8 xl:text-4xl"
           dangerouslySetInnerHTML={{
-            __html: t("home.body.content"),
+            __html: t("home.body.contentHtml"),
           }}
         />
       </main>

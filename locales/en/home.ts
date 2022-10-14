@@ -3,7 +3,7 @@ const home = {
     title: "Home",
   },
   body: {
-    content:
+    contentHtml:
       "This site is <i class='text-yellow-400 not-italic'>under construction</i> 👷🏼‍♂️",
     heading: "Coming soon...",
   },
