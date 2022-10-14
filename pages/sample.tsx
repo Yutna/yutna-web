@@ -1,3 +1,4 @@
+import Head from "next/head";
 import type { NextPage } from "next";
 
 const mockMarkdownContent = `
@@ -32,10 +33,15 @@ const mockMarkdownContent = `
 
 const SamplePage: NextPage = () => {
   return (
-    <article
-      className="prose min-h-screen min-w-full p-4 md:p-6 lg:p-8 xl:p-10 2xl:p-12"
-      dangerouslySetInnerHTML={{ __html: mockMarkdownContent }}
-    />
+    <>
+      <Head>
+        <title>Yutna - Sample</title>
+      </Head>
+      <article
+        className="prose min-h-screen min-w-full p-4 md:p-6 lg:p-8 xl:p-10 2xl:p-12"
+        dangerouslySetInnerHTML={{ __html: mockMarkdownContent }}
+      />
+    </>
   );
 };
 
