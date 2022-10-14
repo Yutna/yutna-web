@@ -7,7 +7,13 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./screens/**/*.{js,ts,jsx,tsx}",
   ],
-  plugins: [require("@tailwindcss/forms")],
+  corePlugins: {
+    aspectRatio: false,
+  },
+  plugins: [
+    require("@tailwindcss/aspect-ratio"),
+    require("@tailwindcss/forms"),
+  ],
   theme: {
     extend: {
       fontFamily: {
