@@ -6,7 +6,16 @@ import { useRouter } from "next/router";
 
 import translations from "@/locales";
 
-export default function useTranslation() {
+export type TFunctionType = (path: string, data?: {}) => string;
+export interface IUseTranslationHook {
+  defaultLocale: string | undefined;
+  locale: string | undefined;
+  locales: string[] | undefined;
+  selectedLocale: string | undefined;
+  t: TFunctionType;
+}
+
+export default function useTranslation(): IUseTranslationHook {
   const { defaultLocale, locale, locales } = useRouter();
   const availableLocales = keys(translations);
 
