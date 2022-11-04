@@ -1,7 +1,7 @@
 import common from "./common";
 import home from "./home";
-import notFound from "./not-found";
-import serverSideError from "./server-side-error";
+import notFound from "./notFound";
+import serverSideError from "./serverSideError";
 
 const th = {
   common,
