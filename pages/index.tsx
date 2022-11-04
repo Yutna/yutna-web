@@ -1,14 +1,19 @@
 import Head from "next/head";
+
+import useTitle from "@/hooks/useTitle";
 import useTranslation from "@/hooks/useTranslation";
+
 import type { NextPage } from "next";
 
 const HomePage: NextPage = () => {
+  // Hooks
   const { t } = useTranslation();
+  const title = useTitle("home", t);
 
   return (
     <div>
       <Head>
-        <title>Yutna - {t("home.head.title")}</title>
+        <title>{title}</title>
       </Head>
       <main className="flex h-screen w-screen flex-col items-center justify-center bg-zinc-900 p-4">
         <h1 className="text-4xl text-white md:text-6xl xl:text-8xl">

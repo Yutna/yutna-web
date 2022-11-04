@@ -4,10 +4,10 @@ import Link from "next/link";
 import useTitle from "@/hooks/useTitle";
 import useTranslation from "@/hooks/useTranslation";
 
-export default function NotFound(): JSX.Element {
+export default function ServerSideError(): JSX.Element {
   // Hooks
   const { t } = useTranslation();
-  const title = useTitle("notFound", t);
+  const title = useTitle("serverSideError", t);
 
   return (
     <>
@@ -19,11 +19,13 @@ export default function NotFound(): JSX.Element {
           className="text-2xl text-white sm:text-4xl md:text-6xl xl:text-8xl"
           lang="en"
         >
-          {t("notFound.body.heading")}
+          {t("serverSideError.body.heading")}
         </h1>
         <p
           className="mt-4 text-center text-base text-white md:mt-6 md:text-2xl xl:mt-8 xl:text-4xl"
-          dangerouslySetInnerHTML={{ __html: t("notFound.body.contentHtml") }}
+          dangerouslySetInnerHTML={{
+            __html: t("serverSideError.body.contentHtml"),
+          }}
         />
         {/* TODO: replace this with button link component in the future */}
         <Link href="/">
