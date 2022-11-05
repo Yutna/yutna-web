@@ -25,11 +25,11 @@ export default function NotFound(): JSX.Element {
           className="mt-4 text-center text-base text-white md:mt-6 md:text-2xl xl:mt-8 xl:text-4xl"
           dangerouslySetInnerHTML={{ __html: t("notFound.body.contentHtml") }}
         />
-        {/* TODO: replace this with button link component in the future */}
-        <Link href="/">
-          <a className="mt-8 rounded bg-yellow-400 py-3 px-5 text-center text-sm hover:bg-yellow-600 sm:py-4 sm:px-8 sm:text-base">
-            {t("common.actions.goBackHome")}
-          </a>
+        <Link
+          href="/"
+          className="mt-8 rounded bg-yellow-400 py-3 px-5 text-center text-sm hover:bg-yellow-600 sm:py-4 sm:px-8 sm:text-base"
+        >
+          {t("common.actions.goBackHome")}
         </Link>
       </main>
     </>

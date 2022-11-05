@@ -27,11 +27,11 @@ export default function ServerSideError(): JSX.Element {
             __html: t("serverSideError.body.contentHtml"),
           }}
         />
-        {/* TODO: replace this with button link component in the future */}
-        <Link href="/">
-          <a className="mt-8 rounded bg-yellow-400 py-3 px-5 text-center text-sm hover:bg-yellow-600 sm:py-4 sm:px-8 sm:text-base">
-            {t("common.actions.goBackHome")}
-          </a>
+        <Link
+          href="/"
+          className="mt-8 rounded bg-yellow-400 py-3 px-5 text-center text-sm hover:bg-yellow-600 sm:py-4 sm:px-8 sm:text-base"
+        >
+          {t("common.actions.goBackHome")}
         </Link>
       </main>
     </>
